@@ -3,6 +3,8 @@
 Mini projet réalisé dans le cadre du **TP Module 0 – Web Avancé (Master 2)**.  
 Ce site présente mon **profil personnel**, mes **compétences**, mes **projets** et mes **coordonnées professionnelles**.
 
+![Screenshot du hero section](image.png)
+
 ## 🚀 Objectif du projet
 
 Créer une **page web personnelle** respectant les bonnes pratiques du développement front-end :
