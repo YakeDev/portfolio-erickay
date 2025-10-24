@@ -21,14 +21,15 @@
 	--color-header-bg: rgba(20, 33, 61, 0.2);
 	--shadow-elevated: 0 20px 40px rgba(20, 33, 61, 0.15);
 
-	--font-family-base: 'Syne', sans-serif;
+	--font-family-base: 'Inter Tight', sans-serif;
 	--font-family-logo: 'Meriva', 'Inter', Tahoma, Geneva, Verdana, sans-serif;
 
 	--navbar-height: 100px;
-	--radius-sm: 5px;
+	--radius-sm: 24px;
+	--radius-full: 100px;
 	--transition-base: 0.3s ease;
 	--gap-md: 1rem;
-	--container-max-width: 1200px;
+	--container-max-width: 1240px;
 	--backdrop-blur: 6px;
 }
 
@@ -46,12 +47,13 @@ body {
 	color: var(--color-neutral-100);
 	font-size: 18px;
 	padding-top: var(--navbar-height);
+	background-color: var(--color-black);
 }
 
 h1,
 h2 {
 	margin: 0;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 h1 {
@@ -61,10 +63,19 @@ h1 {
 h2 {
 	font-size: 2.5rem;
 }
+h3 {
+	font-size: 2rem;
+}
 
 a {
 	color: var(--color-neutral-100);
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 /* ==========================
@@ -96,6 +107,7 @@ header {
 	font-family: var(--font-family-logo);
 	font-size: 1.8rem;
 	letter-spacing: 1px;
+	letter-spacing: -0.5px;
 	color: var(--color-accent);
 }
 
@@ -109,7 +121,7 @@ header {
 }
 
 .menu li a {
-	font-weight: 500;
+	font-weight: 300;
 	transition: color var(--transition-base);
 }
 
@@ -140,6 +152,15 @@ header {
 }
 
 /* ==========================
+Buttons
+========================== */
+.button {
+	background-color: var(--color-accent);
+	padding: 0.6rem 1.5rem;
+	border-radius: var(--radius-sm);
+}
+
+/* ==========================
 Mobile menu
 ========================== */
 .menu_toggle {
@@ -167,6 +188,7 @@ Mobile menu
 }
 
 .menu_toggle::after {
+	transform: translateY(-9px);
 	bottom: 0;
 }
 
@@ -181,29 +203,77 @@ Mobile menu
 	bottom: 9px;
 }
 
+/* ==========================
+   Sections
+========================== */
 section.full-screen {
-	height: 100vh;
+	/* height: 100vh; */
 	top: 0;
 	margin-top: 0;
 	z-index: 3;
 }
-
-/* ==========================
-   Sections
-========================== */
-section {
-	position: relative;
+.container {
+	/* position: relative; */
+	/* scroll-margin-top: var(--navbar-height); */
+	/* height: calc(100vh - 100px); */
+	/* background-color: var(--color-black); */
 	width: 100%;
-	height: calc(100vh - 100px);
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 2rem;
 	display: flex;
-	top: 100px;
-	background-color: var(--color-black);
 	z-index: 2;
 }
-
 section.sticky {
 	position: sticky;
-	margin-top: 100px;
+}
+img.background-mesh {
+	object-fit: cover;
+	object-position: 50% 0%;
+	position: absolute;
+	inset: 0%;
+}
+
+/* Hero */
+
+section.hero {
+	min-height: calc(100vh - 100px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 3rem;
+	width: 100%;
+}
+
+.hero-img-container {
+	display: flex;
+	flex: 2;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	outline: 1px solid var(--color-accent);
+	border-radius: var(--radius-sm);
+}
+
+.hero-text-container {
+	flex: 3;
+}
+
+.hero-text-container p {
+	color: var(--color-neutral-300);
+	max-width: 55ch;
+	font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+	line-height: 1.6;
+}
+
+.hero-text-container .hero-button {
+	margin-top: 3.5rem;
 }
 
 /* ==========================
@@ -211,15 +281,21 @@ section.sticky {
 ========================== */
 .footer {
 	text-align: center;
-	padding: 2rem 1rem;
+	padding: 1.5rem 1.5rem;
 	font-size: 0.9rem;
-	background-color: var(--color-primary);
+	width: 100%;
+	max-width: var(--container-max-width);
+	margin: 0 auto;
 }
 
 /* ==========================
    Responsive
 ========================== */
 @media (max-width: 768px) {
+	.logo {
+		z-index: 1001;
+	}
+
 	.menu_toggle {
 		display: block;
 		z-index: 1001;
@@ -228,24 +304,25 @@ section.sticky {
 
 	.menu {
 		position: fixed;
+		visibility: hidden;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100vh - 100px);
 		background-color: var(--color-black);
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		gap: 2rem;
-		display: none;
-		z-index: 1000;
-		transition: opacity 0.3s ease;
+		align-items: center;
 		opacity: 0;
+		transition: opacity 0.2s ease;
 	}
 
 	.menu.visible {
-		display: flex;
 		opacity: 1;
+		height: 100vh;
+		visibility: visible;
+		pointer-events: auto;
+		transform: translateY(0);
+		transition: opacity 0.5s ease, transform 0.5s ease;
 	}
 
 	.menu li a {
@@ -254,5 +331,14 @@ section.sticky {
 
 	body.menu-open {
 		overflow: hidden;
+	}
+
+	/* Hero */
+	.hero-container {
+		flex-direction: column;
+	}
+
+	.hero-text-container p {
+		/* max-width: 90%; */
 	}
 }

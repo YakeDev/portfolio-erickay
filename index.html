@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon" />
-		<title>TP Module 0 - Portfolio - Eric Kay</title>
+		<title>Portfolio Eric Kay</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body></body>
+
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<a href="#hero">Erickay</a>
+				</div>
+				<ul class="menu" id="primary-navigation">
+					<li><a href="#about">À propos</a></li>
+					<li><a href="#skills">Compétences</a></li>
+					<li><a href="#projects">Projets</a></li>
+					<li><a href="#services">Expertises</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="button menu-buttons">
+						<a href="#contact" class="action-button">Me contacter</a>
+					</li>
+				</ul>
+				<div class="menu_toggle" id="menu-toggle"></div>
+			</nav>
+		</header>
+
+		<main>
+			<section id="hero" class="hero">
+				<div class="container hero-container">
+					<div class="hero-img-container">
+						<img src="./images/erickay.jpg" alt="Photo auteur" srcset="" />
+					</div>
+					<div class="hero-text-container">
+						<h1>
+							Je suis Erickay, graphiste & Web designer créatif basé à
+							Lubumbashi
+						</h1>
+						<p>
+							J’imagine et conçois des univers visuels uniques, pensés pour
+							captiver, inspirer et transmettre des émotions. Chaque projet est
+							une histoire visuelle où formes, couleurs et détails s’unissent
+							pour créer une expérience graphique authentique.
+						</p>
+						<div class="hero-button">
+							<a href="#" class="button">Demander un projet</a>
+						</div>
+					</div>
+				</div>
+				<img
+					src="./images/Background_Mesh.png"
+					class="background-mesh"
+					alt="Background_Mesh"
+					srcset="" />
+			</section>
+			<section id="about" class="about">
+				<h2>À propos</h2>
+			</section>
+			<section id="skills" class="skills">
+				<h2>Compétences</h2>
+			</section>
+			<section id="projects" class="projects">
+				<h2>Projets</h2>
+			</section>
+			<section id="services" class="services">
+				<h2>Expertises</h2>
+			</section>
+			<section id="contact" class="contact">
+				<h2>Contact</h2>
+			</section>
+		</main>
+
+		<footer id="footer" class="footer">
+			<p>&copy; 2025 Eric Kay. Tous droits réservés.</p>
+		</footer>
+
+		<!-- Script -->
+		<script src="./js/script.js"></script>
+	</body>
 </html>
