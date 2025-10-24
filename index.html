@@ -15,6 +15,14 @@
 			href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet" />
 
+		<!-- Font-awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
 		<!-- CSS -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
@@ -23,7 +31,7 @@
 		<header>
 			<nav class="navbar">
 				<div class="logo">
-					<a href="#hero">Erickay</a>
+					<a href="#hero">Erickayembe</a>
 				</div>
 				<ul class="menu" id="primary-navigation">
 					<li><a href="#about">À propos</a></li>
@@ -31,9 +39,9 @@
 					<li><a href="#projects">Projets</a></li>
 					<li><a href="#services">Expertises</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li class="button menu-buttons">
-						<a href="#contact" class="action-button">Me contacter</a>
-					</li>
+					<div class="menu-buttons">
+						<a href="#contact" class="button">Me contacter</a>
+					</div>
 				</ul>
 				<div class="menu_toggle" id="menu-toggle"></div>
 			</nav>
@@ -68,19 +76,151 @@
 					srcset="" />
 			</section>
 			<section id="about" class="about">
-				<h2>À propos</h2>
+				<div class="container about-container">
+					<div class="about-img-container">
+						<h2>À propos de moi</h2>
+						<div class="about-social-container">
+							<p>Suivez-moi sur :</p>
+							<a href="" class="social-icon">
+								<i class="fa-brands fa-behance"></i>
+							</a>
+							<a href="" class="social-icon">
+								<i class="fa-brands fa-dribbble"></i>
+							</a>
+							<a href="" class="social-icon">
+								<i class="fa-brands fa-linkedin-in"></i>
+							</a>
+						</div>
+					</div>
+					<div class="about-text-container">
+						<p>
+							Je suis Eric Kayembe, designer graphique et web designer basé à
+							Lubumbashi. Passionné par le branding, l’expérience utilisateur et
+							la création visuelle, j’accompagne les marques dans la
+							construction de leur identité.
+						</p>
+						<p>
+							Avec plus de 6 ans d’expérience, j’ai travaillé sur des projets
+							variés de la conception d’emballages à la création d’interfaces
+							web modernes. Mon approche repose sur la clarté, le minimalisme et
+							le sens du détail.
+						</p>
+						<p>
+							<strong>Objectif :</strong> Créer des visuels qui inspirent
+							confiance et racontent une histoire.
+						</p>
+						<div class="about-button">
+							<a href="#skills" class="button">Voir mes compétences</a>
+						</div>
+					</div>
+				</div>
+				<img
+					src="./images/BG-Blur.webp"
+					alt="Background flou"
+					class="bg-blur" />
 			</section>
 			<section id="skills" class="skills">
-				<h2>Compétences</h2>
+				<div class="container skills-container">
+					<div class="skills-header">
+						<h2>Mes Compétences</h2>
+						<p class="skills-subtitle">
+							Ce que je fais et les outils que j’utilise au quotidien.
+						</p>
+					</div>
+
+					<div class="skills-grid">
+						<!-- Card 1 -->
+						<article class="skill-card">
+							<div class="skill-icon" aria-hidden="true">
+								<i class="fa-solid fa-pen-nib"></i>
+							</div>
+							<h3 class="skill-title">Design & Identité</h3>
+							<p class="skill-desc">
+								Logos, chartes graphiques et supports imprimés cohérents.
+							</p>
+							<ul class="skill-list">
+								<li>Logotypes & variantes</li>
+								<li>Chartes graphiques</li>
+								<li>Packaging & PLV</li>
+								<li>Guidelines d’usage</li>
+							</ul>
+						</article>
+
+						<!-- Card 2 -->
+						<article class="skill-card">
+							<div class="skill-icon" aria-hidden="true">
+								<i class="fa-solid fa-display"></i>
+							</div>
+							<h3 class="skill-title">Web & UX/UI</h3>
+							<p class="skill-desc">
+								Sites vitrines et interfaces adaptatives, orientés
+								accessibilité.
+							</p>
+							<ul class="skill-list">
+								<li>Wireframes & flows</li>
+								<li>UI responsive</li>
+								<li>Prototypage Figma</li>
+								<li>Accessibilité web</li>
+							</ul>
+						</article>
+
+						<!-- Card 3 -->
+						<article class="skill-card">
+							<div class="skill-icon" aria-hidden="true">
+								<i class="fa-solid fa-tools"></i>
+							</div>
+							<h3 class="skill-title">Outils maîtrisés</h3>
+							<p class="skill-desc">
+								Stack de production pour le design et l’intégration légère.
+							</p>
+							<ul class="skill-list">
+								<li>Figma & FigJam</li>
+								<li>Illustrator · Photoshop</li>
+								<li>Blender (bases)</li>
+								<li>GitHub / Git (bases)</li>
+							</ul>
+						</article>
+
+						<!-- Card 4 -->
+						<article class="skill-card">
+							<div class="skill-icon" aria-hidden="true">
+								<i class="fa-solid fa-lightbulb"></i>
+							</div>
+							<h3 class="skill-title">Soft Skills</h3>
+							<p class="skill-desc">
+								Méthode de travail, communication et esprit d’équipe.
+							</p>
+							<ul class="skill-list">
+								<li>Créativité & curiosité</li>
+								<li>Organisation & rigueur</li>
+								<li>Esprit d’équipe</li>
+								<li>Autonomie & proactivité</li>
+							</ul>
+						</article>
+					</div>
+				</div>
 			</section>
+
 			<section id="projects" class="projects">
-				<h2>Projets</h2>
+				<div class="container">
+					<div>
+						<h2>Projets</h2>
+					</div>
+				</div>
 			</section>
 			<section id="services" class="services">
-				<h2>Expertises</h2>
+				<div class="container">
+					<div>
+						<h2>Expertises</h2>
+					</div>
+				</div>
 			</section>
 			<section id="contact" class="contact">
-				<h2>Contact</h2>
+				<div class="container">
+					<div>
+						<h2>Contact</h2>
+					</div>
+				</div>
 			</section>
 		</main>
 
