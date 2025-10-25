@@ -820,7 +820,7 @@ section.hero {
 
 .contact-container {
 	display: grid;
-	grid-template-columns: 1fr 0.5fr;
+	grid-template-columns: 1fr 0.75fr;
 	gap: 1.5rem;
 	align-items: stretch;
 	padding: 0;

@@ -18,11 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			menu.classList.contains('visible')
 		)
 	})
-
-	//détécter le load | configuation lazy load
-	document.querySelectorAll('img').forEach((img) => {
-		img.addEventListener('load', () => {
-			img.setAttribute('data-loaded', true)
-		})
-	})
 })
