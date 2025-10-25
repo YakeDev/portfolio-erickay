@@ -38,7 +38,6 @@
 ========================== */
 * {
 	box-sizing: border-box;
-	transition: var(--transition-base);
 }
 html {
 	scroll-behavior: smooth;
@@ -91,6 +90,15 @@ img {
 section {
 	margin-bottom: 6rem;
 	scroll-margin-top: var(--navbar-height);
+}
+
+a,
+button,
+img,
+.service-item,
+.pill,
+.hero-img-container img {
+	transition: var(--transition-base);
 }
 
 /* ==========================
@@ -262,8 +270,6 @@ section.full-screen {
 	padding-left: clamp(1rem, 6vw, 3rem);
 	padding-right: clamp(1rem, 6vw, 3rem);
 	margin: 0 auto;
-	padding: 0 2rem;
-	display: flex;
 	z-index: 2;
 }
 
@@ -337,9 +343,6 @@ section.hero {
 
 .about-img-container {
 	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	border-left: 1px solid rgba(255, 255, 255, 0.08);
 	padding-left: 2rem;
 	/* outline: 1px solid var(--color-accent); */
@@ -377,9 +380,8 @@ section.hero {
 	border: 1px solid var(--color-accent);
 	background-color: var(--color-accent);
 	color: var(--color-primary);
-	box-shadow: 0 0 15px var(--color-accent);
+	box-shadow: 0 0 12px var(--color-accent);
 	transition: 0.2s ease;
-	box-shadow: 0 0 8px var(--color-accent);
 	transform: translateY(-2px);
 }
 
@@ -484,6 +486,144 @@ section.hero {
 	color: var(--color-neutral-300);
 }
 
+/* ===== Expertises/Services ===== */
+.services {
+	position: relative;
+}
+
+.services-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+
+.services-header {
+	margin-bottom: 3rem;
+}
+
+.services-header p {
+	max-width: 60ch;
+	opacity: 0.8;
+	line-height: 1.6;
+}
+
+/* ITEM */
+.service-item {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+	padding: 2.5rem 0;
+	position: relative;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+	transition: color 0.4s ease;
+}
+
+.service-item:hover {
+	color: var(--color-accent);
+}
+
+/* GROS NUMÉRO */
+.service-number {
+	font-size: 2.5rem;
+	font-weight: 600;
+	opacity: 0.2;
+	color: var(--color-neutral-300);
+	min-width: 50px;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-item:hover .service-number {
+	opacity: 0.4;
+	transform: translateX(4px);
+}
+
+/* TITRE */
+.service-content h3 {
+	margin: 0 0 0.6rem 0;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+/* PARAGRAPHE */
+.service-content p {
+	margin: 0;
+	opacity: 0.7;
+	max-width: 50ch;
+	line-height: 1.5;
+}
+
+/* afficher la ligne flottante */
+.service-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 0%;
+	height: 2px;
+	background: var(--color-accent);
+	transition: width 0.4s ease;
+}
+
+.service-item:hover::after {
+	width: 100%;
+}
+
+.service-item:hover .service-number {
+	opacity: 0.45;
+	transform: translateX(8px);
+}
+
+.service-item:hover h3 {
+	text-shadow: 0 0 6px rgba(252, 163, 17, 0.3);
+}
+
+/* Extra area (icon + tags) */
+.service-extra {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	opacity: 0.6;
+	transform: translateX(20px);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Tags style */
+.service-extra .tags {
+	font-size: 0.85rem;
+	opacity: 0.8;
+	letter-spacing: -0.2px;
+}
+
+.service-item:hover .tags {
+	color: var(--color-accent);
+}
+
+.pill {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 0.2rem 0.8rem;
+	border-radius: 16px;
+	font-size: 0.7rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	opacity: 0.85;
+}
+
+.service-item:hover .pill {
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+	opacity: 1;
+}
+
+.service-item:hover .service-extra {
+	opacity: 1;
+	transform: translateX(0);
+}
+
 /* ==========================
    Footer
 ========================== */
@@ -516,7 +656,7 @@ section.hero {
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: var(--color-black);
+		background-color: var(--color-primary);
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -572,10 +712,19 @@ section.hero {
 	}
 
 	.about-img-container {
-		flex-direction: row;
+		text-align: center;
 		align-items: center;
 		border-left: none;
+		padding-left: 0rem;
 		gap: 1.5rem;
+	}
+
+	.about-text-container {
+		text-align: center;
+	}
+
+	.about-social-container {
+		justify-content: center;
 	}
 
 	/* ===== Skills ===== */
@@ -586,6 +735,30 @@ section.hero {
 
 	.skills-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* ===== Expertise/Services ===== */
+	.service-item {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.service-number {
+		font-size: 2rem;
+		min-width: 0;
+	}
+
+	.service-item {
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.service-extra {
+		margin-left: 0;
+		margin-top: 1.5rem;
+	}
+
+	.service-content {
+		text-align: center;
 	}
 }
 
@@ -600,7 +773,9 @@ section.hero {
 	}
 
 	/* ===== About ===== */
-
+	.about-container {
+		text-align: center;
+	}
 	.about-img-container {
 		flex-direction: column;
 	}
