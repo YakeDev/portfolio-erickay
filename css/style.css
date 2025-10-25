@@ -87,6 +87,15 @@ img {
 	display: block;
 }
 
+img {
+	filter: blur(0);
+	transition: filter 0.4s ease;
+}
+
+img[data-loaded='true'] {
+	filter: blur(0);
+}
+
 section {
 	margin-bottom: 6rem;
 	scroll-margin-top: var(--navbar-height);
@@ -381,6 +390,10 @@ section.hero {
 	flex: 1;
 	border-left: 1px solid rgba(255, 255, 255, 0.08);
 	padding-left: 2rem;
+}
+
+.about-img-container h2 {
+	margin-top: 1rem;
 }
 
 .about-text-container {

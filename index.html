@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portfolio de Eric Kay — designer graphique et web designer basé à Lubumbashi. Branding, packaging, UX/UI et direction artistique." />
+
 		<title>Portfolio Eric Kay</title>
 
 		<!-- Favicon -->
@@ -29,11 +33,11 @@
 
 	<body>
 		<header>
-			<nav class="navbar">
+			<nav class="navbar" aria-label="Navigation principale">
 				<div class="logo">
 					<a href="#hero">Erickayembe</a>
 				</div>
-				<ul class="menu" id="primary-navigation">
+				<ul class="menu" id="primary-navigation" role="menubar">
 					<li><a href="#about">À propos</a></li>
 					<li><a href="#skills">Compétences</a></li>
 					<li><a href="#projects">Projets</a></li>
@@ -52,7 +56,10 @@
 			<section id="hero" class="hero">
 				<div class="container hero-container">
 					<div class="hero-img-container">
-						<img src="./images/erickay.jpg" alt="Photo auteur" srcset="" />
+						<img
+							src="./images/erickay.jpg"
+							alt="Portrait de Eric Kay, designer graphique et web designer"
+							loading="lazy" />
 					</div>
 					<div class="hero-text-container">
 						<h1>
@@ -74,28 +81,20 @@
 					src="./images/Background_Mesh.png"
 					class="background-mesh"
 					alt="Background_Mesh"
-					srcset="" /><img
+					loading="lazy"
+					decoding="async" />
+				<img
 					src="./images/BG-Blur.webp"
 					alt="Background flou"
-					class="bg-blur" />
+					class="bg-blur"
+					loading="lazy"
+					decoding="async" />
 			</section>
 			<!-- About -->
 			<section id="about" class="about">
 				<div class="container about-container">
 					<div class="about-img-container">
 						<h2>À propos de moi</h2>
-						<!-- <div class="about-social-container">
-							<p>Suivez-moi sur :</p>
-							<a href="" class="social-icon">
-								<i class="fa-brands fa-behance"></i>
-							</a>
-							<a href="" class="social-icon">
-								<i class="fa-brands fa-dribbble"></i>
-							</a>
-							<a href="" class="social-icon">
-								<i class="fa-brands fa-linkedin-in"></i>
-							</a>
-						</div> -->
 					</div>
 					<div class="about-text-container">
 						<p>
@@ -117,13 +116,13 @@
 						<div class="about-social-container">
 							<p>Suivez-moi sur :</p>
 							<a href="" class="social-icon">
-								<i class="fa-brands fa-behance"></i>
+								<i class="fa-brands fa-behance" aria-hidden="true"></i>
 							</a>
 							<a href="" class="social-icon">
-								<i class="fa-brands fa-dribbble"></i>
+								<i class="fa-brands fa-dribbble" aria-hidden="true"></i>
 							</a>
 							<a href="" class="social-icon">
-								<i class="fa-brands fa-linkedin-in"></i>
+								<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
 							</a>
 						</div>
 					</div>
@@ -146,7 +145,7 @@
 						<!-- Card 1 -->
 						<article class="skill-card">
 							<div class="skill-icon" aria-hidden="true">
-								<i class="fa-solid fa-pen-nib"></i>
+								<i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
 							</div>
 							<h3 class="skill-title">Design & Identité</h3>
 							<p class="skill-desc">
@@ -163,7 +162,7 @@
 						<!-- Card 2 -->
 						<article class="skill-card">
 							<div class="skill-icon" aria-hidden="true">
-								<i class="fa-solid fa-display"></i>
+								<i class="fa-solid fa-display" aria-hidden="true"></i>
 							</div>
 							<h3 class="skill-title">Web & UX/UI</h3>
 							<p class="skill-desc">
@@ -181,7 +180,7 @@
 						<!-- Card 3 -->
 						<article class="skill-card">
 							<div class="skill-icon" aria-hidden="true">
-								<i class="fa-solid fa-tools"></i>
+								<i class="fa-solid fa-tools" aria-hidden="true"></i>
 							</div>
 							<h3 class="skill-title">Outils maîtrisés</h3>
 							<p class="skill-desc">
@@ -198,7 +197,7 @@
 						<!-- Card 4 -->
 						<article class="skill-card">
 							<div class="skill-icon" aria-hidden="true">
-								<i class="fa-solid fa-lightbulb"></i>
+								<i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
 							</div>
 							<h3 class="skill-title">Soft Skills</h3>
 							<p class="skill-desc">
@@ -227,7 +226,7 @@
 						<div class="projects-underline"></div>
 					</div>
 					<!-- Project 1 -->
-					<div class="project-item">
+					<article class="project-item">
 						<span class="project-number">01</span>
 						<div class="project-content">
 							<h3>Matunga Farm</h3>
@@ -240,14 +239,15 @@
 						<div class="project-preview">
 							<img
 								src="./images/projects/Matunda-farm.webp"
-								alt="Baby food image projet" />
+								alt="Baby food image projet"
+								loading="lazy" />
 						</div>
 						<span class="project-arrow">
-							<i class="fa-solid fa-arrow-right-long"></i>
+							<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 						</span>
-					</div>
+					</article>
 					<!-- Project 2 -->
-					<div class="project-item">
+					<article class="project-item">
 						<span class="project-number">02</span>
 						<div class="project-content">
 							<h3>Nyama Ya Leo</h3>
@@ -261,14 +261,15 @@
 						<div class="project-preview">
 							<img
 								src="./images/projects/nyama-ya-leo.webp"
-								alt="Image du presention projet" />
+								alt="Image carton nyama ya leo"
+								loading="lazy" />
 						</div>
 						<span class="project-arrow">
-							<i class="fa-solid fa-arrow-right-long"></i>
+							<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 						</span>
-					</div>
+					</article>
 					<!-- Project 3 -->
-					<div class="project-item">
+					<article class="project-item">
 						<span class="project-number">03</span>
 						<div class="project-content">
 							<h3>Gocongo</h3>
@@ -282,14 +283,15 @@
 						<div class="project-preview">
 							<img
 								src="./images/projects/gocongo-website.webp"
-								alt="Image du presention projet" />
+								alt="Image qui montre les site de gocongo sur u ordinateur"
+								loading="lazy" />
 						</div>
 						<span class="project-arrow">
-							<i class="fa-solid fa-arrow-right-long"></i>
+							<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 						</span>
-					</div>
+					</article>
 					<!-- Project 4 -->
-					<div class="project-item">
+					<article class="project-item">
 						<span class="project-number">04</span>
 						<div class="project-content">
 							<h3>Force Glucose</h3>
@@ -303,12 +305,13 @@
 						<div class="project-preview">
 							<img
 								src="./images/projects/force-glucose.webp"
-								alt="Image du presention projet" />
+								alt="Image qui montre les biscuits force Glucose dans un carton"
+								loading="lazy" />
 						</div>
 						<span class="project-arrow">
-							<i class="fa-solid fa-arrow-right-long"></i>
+							<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 						</span>
-					</div>
+					</article>
 				</div>
 			</section>
 			<!-- Ma methode -->
@@ -462,15 +465,16 @@
 								href="mailto:hello@ericaystudio.com"
 								class="button"
 								target="_blank">
-								<i class="fa-solid fa-envelope"></i>
+								<i class="fa-solid fa-envelope" aria-hidden="true"></i>
 								Envoyer un email
 							</a>
 
 							<a
 								href="https://wa.me/+243814886101"
 								class="button ghost"
-								target="_blank">
-								<i class="fa-brands fa-whatsapp"></i>
+								target="_blank"
+								rel="noopener noreferrer">
+								<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
 								WhatsApp
 							</a>
 						</div>
@@ -482,7 +486,11 @@
 							<li><a href="#projects">Projets</a></li>
 							<li><a href="#skills">Compétences</a></li>
 							<li><a href="#services">Services</a></li>
-							<li><a href="cv.pdf" target="_blank">CV</a></li>
+							<li>
+								<a href="cv.pdf" target="_blank" rel="noopener noreferrer"
+									>CV</a
+								>
+							</li>
 							<li><a href="#faq">FAQ</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
@@ -493,9 +501,12 @@
 								href="https://www.behance.net/erickaystudio"
 								class="pill"
 								target="_blank"
+								rel="noopener noreferrer"
 								>Behance</a
 							>
-							<a href="#" class="pill" target="_blank">Instagram</a>
+							<a href="#" class="pill" target="_blank" rel="noopener noreferrer"
+								>Instagram</a
+							>
 						</div>
 					</div>
 				</div>
@@ -509,9 +520,9 @@
 				<div class="footer-content">
 					<p>
 						© 2025. Tous droits réservés. | Développé avec
-						<i class="fa-solid fa-heart"></i>
+						<i class="fa-solid fa-heart" aria-hidden="true"></i>
 						et beaucoup de
-						<i class="fa-solid fa-mug-saucer"></i>
+						<i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
 						— Eric Kayembe
 					</p>
 				</div>
