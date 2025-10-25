@@ -1036,6 +1036,10 @@ section.hero {
 		z-index: 1001;
 	}
 
+	.menu-buttons {
+		display: none;
+	}
+
 	.menu_toggle {
 		display: block;
 		z-index: 1001;
@@ -1086,6 +1090,7 @@ section.hero {
 	.hero-text-container {
 		text-align: center;
 		margin-bottom: 2rem;
+		margin-top: 4rem;
 	}
 	.hero-text-container p {
 		margin: 2rem auto;
