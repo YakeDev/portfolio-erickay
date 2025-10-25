@@ -387,7 +387,7 @@ section.hero {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 4rem;
+	gap: 3.5rem;
 }
 
 .about-img-container {
@@ -464,8 +464,8 @@ section.hero {
 .skills-container {
 	display: flex;
 	flex-direction: column;
-	margin-top: 10rem;
-	margin-bottom: 10rem;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
 }
 
 .skills-header {
@@ -803,6 +803,7 @@ section.hero {
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	opacity: 0.85;
+	transform: scale(1);
 }
 
 .service-item:hover .pill {
@@ -952,6 +953,13 @@ section.hero {
 	justify-content: flex-start;
 	gap: 1rem;
 	margin-top: 2.3rem;
+}
+
+.socials .pill:hover {
+	border-color: var(--color-accent);
+	color: var(--color-accent);
+	opacity: 1;
+	transform: scale(1.08);
 }
 
 /* Blur */
@@ -1206,7 +1214,7 @@ section.hero {
 
 	/* ===== Footer ====== */
 	.footer-container {
-		padding: 0 1.2rem;
+		padding: 0 0.5rem;
 	}
 }
 
@@ -1224,10 +1232,6 @@ section.hero {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	}
-
-	section {
-		margin-bottom: 2rem;
 	}
 
 	/* ===== About ===== */
@@ -1252,6 +1256,10 @@ section.hero {
 		grid-template-columns: repeat(1, 1fr);
 		gap: 3rem;
 	}
+	/* ===== Services ===== */
+	.service-extra {
+		flex-wrap: wrap;
+	}
 
 	/* ===== Contacts ===== */
 	.contact-container {
@@ -1265,7 +1273,15 @@ section.hero {
 
 	.contact-left,
 	.contact-right {
-		padding: 2rem 1.5rem;
+		padding: 3rem 1.5rem;
+	}
+
+	.contact-header h2 {
+		font-size: 2.5rem;
+	}
+
+	.contact-actions {
+		flex-direction: column;
 	}
 }
 
